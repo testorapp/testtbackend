@@ -8,7 +8,8 @@ from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Email, Length, Regexp, EqualTo, ValidationError
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from flask_cors import CORS
+CORS(app, origins=["https://testorapp.github.io"])
 # Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()

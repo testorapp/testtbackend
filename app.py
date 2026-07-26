@@ -9,13 +9,13 @@ from wtforms.validators import DataRequired, Email, Length, Regexp, EqualTo, Val
 import re
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-CORS(app, origins=["https://testorapp.github.io"])
+
 # Load environment variables from .env file
 from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-
+CORS(app, origins=["https://testorapp.github.io"])
 # Configuration
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///testora.db'

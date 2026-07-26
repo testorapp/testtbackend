@@ -40,7 +40,7 @@ app.config['MAIL_DEFAULT_SENDER'] = os.environ.get('MAIL_USERNAME', 'testora.inc
 mail = Mail(app)
 db = SQLAlchemy(app)
 
-FRONTEND_URL = "https://testorapp.github.io"
+FRONTEND_URL = "https://testorapp.github.io/Testora"
 
 # ==================== MODELS ====================
 

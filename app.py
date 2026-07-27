@@ -32,9 +32,17 @@ if database_url.startswith("postgres://"):
         "postgresql+psycopg://",
         1
     )
+elif database_url.startswith("postgresql://"):
+    database_url = database_url.replace(
+        "postgresql://",
+        "postgresql+psycopg://",
+        1
+    )
+
+print("DATABASE URL:", database_url)  # Temporary for debugging
 
 app.config["SQLALCHEMY_DATABASE_URI"] = database_url
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = Falsese
 
 # Email config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'

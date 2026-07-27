@@ -22,8 +22,7 @@ app.config['SESSION_COOKIE_SAMESITE'] = 'None'
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 
-# Database - uses Render PostgreSQL if available, falls back to SQLite
-database_url = os.environ.get('DATABASE_URL', 'sqlite:///testora.db')
+
 # Database - uses Render PostgreSQL if available, falls back to SQLite
 database_url = os.environ.get("DATABASE_URL", "sqlite:///testora.db")
 

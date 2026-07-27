@@ -42,7 +42,7 @@ elif database_url.startswith("postgresql://"):
 print("DATABASE URL:", database_url)  # Temporary for debugging
 
 app.config["SQLALCHEMY_DATABASE_URI"] = database_url
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = Falsese
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Email config
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
